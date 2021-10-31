@@ -26,3 +26,19 @@
 - Avoiding overly complicated code through inheritance
 - **Super** keyword
 - Private and protected method and properties
+
+### Abstract classes
+
+- How does JS know who is being instantiated
+- Thinking about protecting our system
+- Throwing errors to the system
+- Abstract classes
+- Abstract methods
+- Runtime errors
+
+### Internal system
+
+- Inheritance review, code beast practices and encapsulation;
+ -Polymorphism
+- Static methods
+- Ways to treat objects of different types

@@ -1,4 +1,4 @@
-import { Customer } from "./Customer.js";
+import { Customer } from "../Customer.js";
 
 // Abstract class
 export class Account {
