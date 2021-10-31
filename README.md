@@ -15,3 +15,14 @@
 - Always declaring properties to be private initially
 - Code duplication problems
 - Extremely shared code issues
+
+### Inheritance
+
+- Specializing code
+- Inheriting properties and attributes
+- Method overloading
+- Sharing code securely
+- Keeping our code in the customer'r language
+- Avoiding overly complicated code through inheritance
+- **Super** keyword
+- Private and protected method and properties

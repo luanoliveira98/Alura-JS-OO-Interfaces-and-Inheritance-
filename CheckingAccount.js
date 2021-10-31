@@ -1,42 +1,12 @@
-import { Customer } from "./Customer.js";
+import { Account } from "./Account.js";
 
-export class CheckingAccount {
+export class CheckingAccount extends Account {
     static numberOfAccounts = 0;
 
-    set customer(newValue) {
-        if (!newValue instanceof Customer) return;
-        this._customer = newValue;
-    }
+    constructor(customer, agency) {
+        super(0, customer, agency);
+        this._rate = 1.1;
 
-    get customer() {
-        return this._customer;
-    }
-
-    get balance() {
-        return this._balance;
-    }
-
-    constructor(agency, customer) {
-        this.agency = agency;
-        this._customer = customer;
-        this._balance = 0;
         CheckingAccount.numberOfAccounts += 1;
-    }
-
-    deposit(value) {
-        if (value <= 0) return;
-        this._balance += value;
-        return value;
-    }
-
-    withdraw(value) {
-        if (this._balance < value || value <= 0) return;
-        this._balance -= value;
-        return value;
-    }
-
-    transfer(value, account) {
-        const valueWithdraw = this.withdraw(value);
-        account.deposit(valueWithdraw);
     }
 }

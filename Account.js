@@ -1,8 +1,30 @@
+import { Customer } from "./Customer.js";
+
 export class Account {
+
     constructor(initialBalance, customer, agency) {
-        this._balance = initialBalance;
         this._customer = customer;
         this._agency = agency;
+        this._balance = initialBalance;
+    
+        this._rate = 1;
+    }
+
+    set customer(newValue) {
+        if (!newValue instanceof Customer) return;
+        this._customer = newValue;
+    }
+
+    get customer() {
+        return this._customer;
+    }
+
+    get balance() {
+        return this._balance;
+    }
+
+    get rate() {
+        return this._rate;
     }
 
     deposit(value) {
@@ -12,7 +34,8 @@ export class Account {
     }
 
     withdraw(value) {
-        if (this._balance < value || value <= 0) return;
+        value *= this._rate;
+        if (this._balance < value || value <= 0) return 0;
         this._balance -= value;
         return value;
     }
