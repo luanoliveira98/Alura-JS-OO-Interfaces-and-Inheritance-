@@ -1,12 +1,13 @@
 import { Customer } from "./Customer.js";
 
+// Abstract class
 export class Account {
 
     constructor(initialBalance, customer, agency) {
+        if (this.constructor == Account) throw new Error("You shouldn't instantiate an object of type Account directly, as this is an abstract class!");
         this._customer = customer;
         this._agency = agency;
         this._balance = initialBalance;
-    
         this._rate = 1;
     }
 
