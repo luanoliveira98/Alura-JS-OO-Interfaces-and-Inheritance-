@@ -42,3 +42,11 @@
  -Polymorphism
 - Static methods
 - Ways to treat objects of different types
+
+### Interfaces and Duck Type
+
+- Operator in
+- Operator instanceOf
+- How to protect our systems
+- Standardized interfaces
+- Duck Type
